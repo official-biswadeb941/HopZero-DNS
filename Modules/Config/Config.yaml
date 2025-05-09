@@ -1,0 +1,19 @@
+redis:
+  addr: "localhost:6379"
+  password: ""
+  db: 0
+  connection_pool:
+    max_connections: 10  # Max number of connections in the pool
+    timeout: 30          # Timeout in seconds for Redis connections
+
+mysql:
+  user: "root"
+  password: "root"
+  host: "127.0.0.1"
+  port: 3306
+  database: "test"
+  connection_pool:
+    pool_size: 10         # Max number of connections in the pool
+    pool_name: "mypool"   # Pool name
+    pool_reset_session: true  # Reset session state when returning connections
+    timeout: 30           # Timeout in seconds for MySQL connections

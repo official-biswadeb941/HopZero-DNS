@@ -1,0 +1,17 @@
+# Ignore Logs directory and log files
+Logs/
+
+# Ignore other possible log files
+*.log
+
+# Ignore Go binaries and build files
+*.exe
+*.test
+*.out
+
+# Ignore any IDE-specific files (e.g., for VSCode)
+.vscode/
+
+# Ignore other temporary files or directories that shouldn't be committed
+*.swp
+.DS_Store
