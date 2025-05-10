@@ -18,7 +18,7 @@ func main() {
 	Redis.InitRedis()
 
 	// Start UDP DNS server
-	go startUDPServer()
+	//	go startUDPServer()
 
 	// Start QUIC DNS server
 	go startQUICServer()
@@ -28,14 +28,14 @@ func main() {
 
 // ---------------- UDP DNS ----------------
 
-func startUDPServer() {
-	dns.HandleFunc(".", handleDNSRequestUDP)
-	server := &dns.Server{Addr: ":53", Net: "udp"}
-	Logger.LogApplication("🚀 UDP DNS server listening on port 53...")
-	if err := server.ListenAndServe(); err != nil {
-		Logger.LogError("❌ Failed to start UDP DNS server", err)
-	}
-}
+//func startUDPServer() {
+//	dns.HandleFunc(".", handleDNSRequestUDP)
+//	server := &dns.Server{Addr: ":53", Net: "udp"}
+//	Logger.LogApplication("🚀 UDP DNS server listening on port 53...")
+//	if err := server.ListenAndServe(); err != nil {
+//		Logger.LogError("❌ Failed to start UDP DNS server", err)
+//	}
+//}
 
 func handleDNSRequestUDP(w dns.ResponseWriter, r *dns.Msg) {
 	msg := new(dns.Msg)

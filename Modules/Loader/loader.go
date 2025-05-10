@@ -32,24 +32,26 @@ type Config struct {
 			Timeout          int    `yaml:"timeout"`
 		} `yaml:"connection_pool"`
 	} `yaml:"mysql"`
+
+	TLS struct {
+		Cert string `yaml:"cert"`
+		Key  string `yaml:"key"`
+	} `yaml:"tls"`
 }
 
 var AppConfig Config
 
 // LoadConfig reads and loads the configuration from the given file
 func LoadConfig(path string) error {
-	// Read the configuration file
 	data, err := os.ReadFile(path)
 	if err != nil {
 		return fmt.Errorf("❌ Failed to read config file: %v", err)
 	}
 
-	// Unmarshal the YAML data into the AppConfig struct
 	if err := yaml.Unmarshal(data, &AppConfig); err != nil {
 		return fmt.Errorf("❌ Failed to parse config: %v", err)
 	}
 
-	// Validate the loaded config
 	if err := validateConfig(); err != nil {
 		return fmt.Errorf("❌ Invalid config: %v", err)
 	}
@@ -60,7 +62,6 @@ func LoadConfig(path string) error {
 
 // validateConfig performs basic validation on the loaded config
 func validateConfig() error {
-	// Check Redis configuration
 	if AppConfig.Redis.Addr == "" {
 		return fmt.Errorf("redis address is missing")
 	}
@@ -71,7 +72,6 @@ func validateConfig() error {
 		return fmt.Errorf("redis timeout must be a positive number")
 	}
 
-	// Check MySQL configuration
 	if AppConfig.MySQL.User == "" || AppConfig.MySQL.Password == "" || AppConfig.MySQL.Host == "" || AppConfig.MySQL.Database == "" {
 		return fmt.Errorf("MySQL configuration is incomplete")
 	}
@@ -83,6 +83,20 @@ func validateConfig() error {
 	}
 	if AppConfig.MySQL.ConnectionPool.Timeout <= 0 {
 		return fmt.Errorf("MySQL timeout must be a positive number")
+	}
+
+	// TLS config check
+	if AppConfig.TLS.Cert == "" {
+		return fmt.Errorf("TLS certificate path is missing")
+	}
+	if AppConfig.TLS.Key == "" {
+		return fmt.Errorf("TLS key path is missing")
+	}
+	if _, err := os.Stat(AppConfig.TLS.Cert); os.IsNotExist(err) {
+		return fmt.Errorf("TLS cert file not found: %s", AppConfig.TLS.Cert)
+	}
+	if _, err := os.Stat(AppConfig.TLS.Key); os.IsNotExist(err) {
+		return fmt.Errorf("TLS key file not found: %s", AppConfig.TLS.Key)
 	}
 
 	return nil

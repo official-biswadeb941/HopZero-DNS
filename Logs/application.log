@@ -1,0 +1,883 @@
+[APP] 2025/05/10 23:42:07 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/10 23:42:07 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/10 23:45:30 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/10 23:45:30 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/10 23:45:30 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/10 23:45:31 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:31 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:31 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:31 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:36 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:36 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:36 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:36 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:36 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:36 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:36 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:36 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:36 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:36 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:38 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (AAAA)
+[APP] 2025/05/10 23:45:38 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/10 23:45:38 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:38 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:38 logger.go:64: 📨 [QUIC] Received query for main.vscode-cdn.net. (A)
+[APP] 2025/05/10 23:45:38 logger.go:64: ✅ Cache hit for domain: main.vscode-cdn.net., qtype: 1
+[APP] 2025/05/10 23:45:38 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:38 logger.go:64: 📨 [QUIC] Received query for telemetry.individual.githubcopilot.com. (AAAA)
+[APP] 2025/05/10 23:45:38 logger.go:64: 📨 [QUIC] Received query for telemetry.individual.githubcopilot.com. (A)
+[APP] 2025/05/10 23:45:38 logger.go:64: ✅ Cache hit for domain: telemetry.individual.githubcopilot.com., qtype: 28
+[APP] 2025/05/10 23:45:38 logger.go:64: ✅ Cache hit for domain: telemetry.individual.githubcopilot.com., qtype: 1
+[APP] 2025/05/10 23:45:38 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:38 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:40 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:40 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:40 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:40 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:40 logger.go:64: ✅ Cache hit for domain: gfs270n070.userstorage.mega.co.nz., qtype: 1
+[APP] 2025/05/10 23:45:40 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:40 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:40 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:41 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:41 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:41 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:41 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:41 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:41 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:41 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:41 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:41 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:41 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:43 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:43 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:43 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/10 23:45:43 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (AAAA)
+[APP] 2025/05/10 23:45:43 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:43 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:43 logger.go:64: 📨 [QUIC] Received query for main.vscode-cdn.net. (A)
+[APP] 2025/05/10 23:45:43 logger.go:64: ✅ Cache hit for domain: main.vscode-cdn.net., qtype: 1
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:43 logger.go:64: 📨 [QUIC] Received query for telemetry.individual.githubcopilot.com. (A)
+[APP] 2025/05/10 23:45:43 logger.go:64: 📨 [QUIC] Received query for telemetry.individual.githubcopilot.com. (AAAA)
+[APP] 2025/05/10 23:45:43 logger.go:64: ✅ Cache hit for domain: telemetry.individual.githubcopilot.com., qtype: 1
+[APP] 2025/05/10 23:45:43 logger.go:64: ✅ Cache hit for domain: telemetry.individual.githubcopilot.com., qtype: 28
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:44 logger.go:64: 📨 [QUIC] Received query for main.vscode-cdn.net. (A)
+[APP] 2025/05/10 23:45:44 logger.go:64: ✅ Cache hit for domain: main.vscode-cdn.net., qtype: 1
+[APP] 2025/05/10 23:45:44 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:44 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:44 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:44 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:44 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:45 logger.go:64: ✅ Cache hit for domain: gfs270n070.userstorage.mega.co.nz., qtype: 1
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:45 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:45 logger.go:64: 📨 [QUIC] Received query for google.com. (A)
+[APP] 2025/05/10 23:45:45 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:46 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:46 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:46 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:46 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:46 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:46 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:46 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:46 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:48 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:48 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:48 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:48 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:48 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:48 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:48 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:48 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:48 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:48 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:49 logger.go:64: 📨 [QUIC] Received query for main.vscode-cdn.net. (A)
+[APP] 2025/05/10 23:45:49 logger.go:64: ✅ Cache hit for domain: main.vscode-cdn.net., qtype: 1
+[APP] 2025/05/10 23:45:49 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:49 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:49 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:49 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:49 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:49 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:49 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:49 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:49 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:49 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:49 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:50 logger.go:64: 📨 [QUIC] Received query for gfs270n071.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:50 logger.go:64: 📨 [QUIC] Received query for gfs270n071.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - timeout: no recent network activity
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:50 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:50 logger.go:64: 📨 [QUIC] Received query for google.com. (A)
+[APP] 2025/05/10 23:45:50 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:51 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/10 23:45:51 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:51 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:51 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:51 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/10 23:45:51 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:51 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:51 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:51 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:51 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/10 23:45:53 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:53 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:53 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:53 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:53 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:53 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:53 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:53 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:54 logger.go:64: ✅ Cache hit for domain: gfs270n070.userstorage.mega.co.nz., qtype: 1
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:54 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:54 logger.go:64: 📨 [QUIC] Received query for g.api.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:54 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:55 logger.go:64: 📨 [QUIC] Received query for gfs270n071.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:55 logger.go:64: 📨 [QUIC] Received query for gfs270n071.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:55 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:55 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:56 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:56 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:56 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:56 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/10 23:45:56 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:56 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:56 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/10 23:45:56 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:56 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/10 23:45:56 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:56 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/10 23:45:56 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:56 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/10 23:45:58 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:58 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:58 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/10 23:45:58 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/10 23:45:58 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - timeout: no recent network activity
+[APP] 2025/05/10 23:45:58 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:58 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:58 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/10 23:45:59 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:59 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:59 logger.go:64: 📨 [QUIC] Received query for gfs204n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:59 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (A)
+[APP] 2025/05/10 23:45:59 logger.go:64: ✅ Cache hit for domain: gfs270n070.userstorage.mega.co.nz., qtype: 1
+[APP] 2025/05/10 23:45:59 logger.go:64: 📨 [QUIC] Received query for gfs270n078.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:59 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:45:59 logger.go:64: 📨 [QUIC] Received query for gfs270n070.userstorage.mega.co.nz. (AAAA)
+[APP] 2025/05/10 23:45:59 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/10 23:51:14 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/10 23:51:14 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/10 23:51:14 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/10 23:51:15 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:15 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:15 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:15 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:20 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:20 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:20 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:20 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:24 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:24 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:25 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:25 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:25 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:25 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:26 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:26 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:30 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:30 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:31 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:31 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:51:32 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:51:32 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:08 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/10 23:53:08 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/10 23:53:08 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:13 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:18 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:21 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:21 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:21 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:21 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:23 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:23 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:23 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:23 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:24 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:25 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:25 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:26 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:26 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:29 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:29 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:30 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:30 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:31 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:31 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:31 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:31 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:35 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:35 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:35 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:35 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/10 23:53:35 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/10 23:53:35 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:15 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/11 00:02:15 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/11 00:02:15 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/11 00:02:15 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:15 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:15 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:15 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:18 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:18 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:20 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:20 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:20 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:20 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:22 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:22 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:23 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:23 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:23 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:23 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:23 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:23 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:24 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:24 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:24 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:25 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:25 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:25 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:25 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:25 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:25 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:27 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:27 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:28 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:28 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:29 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:29 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:02:30 logger.go:74: ERROR: ❌ Failed to unpack QUIC DNS request - dns: bad rdata
+[APP] 2025/05/11 00:02:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:11:35 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/11 00:11:35 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/11 00:11:35 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/11 00:11:55 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:11:55 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:00 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:00 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:00 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:00 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:00 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:01 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:01 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:05 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:05 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:05 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:05 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:05 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:06 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:06 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:06 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:06 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:06 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:07 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:07 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:10 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:10 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:10 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:10 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:11 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:11 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:11 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:11 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:11 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:12 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:12 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:12 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:12 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:12 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:13 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:13 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:15 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:15 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:15 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:15 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:16 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:16 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:16 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:16 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:17 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:17 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:17 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:17 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:17 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:18 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:18 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:18 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:18 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:18 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:19 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:19 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:20 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:20 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:20 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:20 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:21 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:21 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:21 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:21 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:22 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:22 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:22 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:22 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:23 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:23 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:23 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:23 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:23 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:24 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:24 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (HTTPS)
+[APP] 2025/05/11 00:12:24 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:24 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:24 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:24 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:24 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:24 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:24 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:25 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:25 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:25 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:25 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:25 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (HTTPS)
+[APP] 2025/05/11 00:12:25 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:25 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:25 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:25 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:25 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:26 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (HTTPS)
+[APP] 2025/05/11 00:12:26 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (A)
+[APP] 2025/05/11 00:12:26 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:26 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:26 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:26 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:26 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:26 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:27 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (A)
+[APP] 2025/05/11 00:12:27 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (HTTPS)
+[APP] 2025/05/11 00:12:27 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:27 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:27 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:27 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:27 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:27 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:27 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:27 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:28 logger.go:64: 📨 [QUIC] Received query for default.exp-tas.com. (A)
+[APP] 2025/05/11 00:12:28 logger.go:64: 📨 [QUIC] Received query for default.exp-tas.com. (AAAA)
+[APP] 2025/05/11 00:12:28 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:28 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:28 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:28 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:28 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:28 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:29 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (A)
+[APP] 2025/05/11 00:12:29 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:29 logger.go:64: 📨 [QUIC] Received query for google.com. (A)
+[APP] 2025/05/11 00:12:29 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:29 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:29 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:29 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:29 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:29 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: ❌ QUIC dial error to 192.112.36.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:30 logger.go:64: 🔍 Querying root server via QUIC: 198.97.190.53:53
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:30 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:30 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:30 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:30 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:30 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:30 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:30 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:31 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:31 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:31 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:31 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:31 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:31 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:31 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:31 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:31 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:31 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:31 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:31 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:32 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:32 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:32 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:32 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:32 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:32 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:32 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:32 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:33 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:33 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:33 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:33 logger.go:64: 📨 [QUIC] Received query for default.exp-tas.com. (A)
+[APP] 2025/05/11 00:12:33 logger.go:64: 📨 [QUIC] Received query for default.exp-tas.com. (AAAA)
+[APP] 2025/05/11 00:12:33 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:33 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:33 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:33 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:33 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:34 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (A)
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:34 logger.go:64: 📨 [QUIC] Received query for google.com. (A)
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:34 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:34 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:35 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (A)
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: ❌ QUIC dial error to 198.97.190.53:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 192.36.148.17:53
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: ❌ QUIC dial error to 192.112.36.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 198.97.190.53:53
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:35 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:35 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:36 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:36 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:36 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:36 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:36 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:36 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:36 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:36 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:36 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:36 logger.go:74: ERROR: ❌ QUIC dial error to 192.112.36.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:36 logger.go:64: 🔍 Querying root server via QUIC: 198.97.190.53:53
+[APP] 2025/05/11 00:12:36 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:36 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:37 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:37 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:37 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (HTTPS)
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:37 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:37 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:38 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:38 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:38 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (HTTPS)
+[APP] 2025/05/11 00:12:38 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:38 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:39 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:39 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:40 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:40 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (AAAA)
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:40 logger.go:64: 📨 [QUIC] Received query for clientservices.googleapis.com. (A)
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 192.36.148.17:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 192.58.128.30:53
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 198.97.190.53:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 192.36.148.17:53
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:40 logger.go:64: 📨 [QUIC] Received query for clients4.google.com. (A)
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:40 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:40 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:41 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:41 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:41 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:41 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: ❌ QUIC dial error to 198.97.190.53:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:41 logger.go:64: 🔍 Querying root server via QUIC: 192.36.148.17:53
+[APP] 2025/05/11 00:12:41 logger.go:74: ERROR: ❌ QUIC dial error to 192.112.36.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:41 logger.go:64: 🔍 Querying root server via QUIC: 198.97.190.53:53
+[APP] 2025/05/11 00:12:42 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:42 logger.go:64: 📨 [QUIC] Received query for mobile.events.data.microsoft.com. (A)
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 192.112.36.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 198.97.190.53:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:42 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:42 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - timeout: no recent network activity
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: Failed to accept QUIC stream - Application error 0x0 (remote)
+[APP] 2025/05/11 00:12:43 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:43 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:12:44 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:12:44 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:25:40 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/11 00:25:40 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/11 00:27:17 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/11 00:27:17 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/11 00:27:17 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/11 00:30:24 logger.go:64: 📨 [QUIC] Received query for example.com. (A)
+[APP] 2025/05/11 00:30:24 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:30:29 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:29 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:30:34 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:34 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:30:39 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:39 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:30:44 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:44 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:30:49 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:49 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:30:54 logger.go:74: ERROR: ❌ QUIC dial error to 192.5.5.241:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:54 logger.go:64: 🔍 Querying root server via QUIC: 192.112.36.4:53
+[APP] 2025/05/11 00:30:55 logger.go:74: ERROR: Failed to accept QUIC stream - timeout: no recent network activity
+[APP] 2025/05/11 00:30:59 logger.go:74: ERROR: ❌ QUIC dial error to 192.112.36.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:30:59 logger.go:64: 🔍 Querying root server via QUIC: 198.97.190.53:53
+[APP] 2025/05/11 00:31:05 logger.go:74: ERROR: ❌ QUIC dial error to 198.97.190.53:53 - context deadline exceeded
+[APP] 2025/05/11 00:31:05 logger.go:64: 🔍 Querying root server via QUIC: 192.36.148.17:53
+[APP] 2025/05/11 00:31:10 logger.go:74: ERROR: ❌ QUIC dial error to 192.36.148.17:53 - context deadline exceeded
+[APP] 2025/05/11 00:31:10 logger.go:64: 🔍 Querying root server via QUIC: 192.58.128.30:53
+[APP] 2025/05/11 00:46:15 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/11 00:46:15 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/11 00:46:15 logger.go:64: 🚀 QUIC DNS server listening on port 853...
+[APP] 2025/05/11 00:51:18 logger.go:64: 📨 [QUIC] Received query for google.com. (A)
+[APP] 2025/05/11 00:51:18 logger.go:64: 🔍 Querying root server via QUIC: 198.41.0.4:53
+[APP] 2025/05/11 00:51:23 logger.go:74: ERROR: ❌ QUIC dial error to 198.41.0.4:53 - context deadline exceeded
+[APP] 2025/05/11 00:51:23 logger.go:64: 🔍 Querying root server via QUIC: 192.228.79.201:53
+[APP] 2025/05/11 00:51:28 logger.go:74: ERROR: ❌ QUIC dial error to 192.228.79.201:53 - context deadline exceeded
+[APP] 2025/05/11 00:51:28 logger.go:64: 🔍 Querying root server via QUIC: 192.33.4.12:53
+[APP] 2025/05/11 00:51:33 logger.go:74: ERROR: ❌ QUIC dial error to 192.33.4.12:53 - context deadline exceeded
+[APP] 2025/05/11 00:51:33 logger.go:64: 🔍 Querying root server via QUIC: 199.7.91.13:53
+[APP] 2025/05/11 00:51:38 logger.go:74: ERROR: ❌ QUIC dial error to 199.7.91.13:53 - context deadline exceeded
+[APP] 2025/05/11 00:51:38 logger.go:64: 🔍 Querying root server via QUIC: 192.203.230.10:53
+[APP] 2025/05/11 00:51:43 logger.go:74: ERROR: ❌ QUIC dial error to 192.203.230.10:53 - timeout: no recent network activity
+[APP] 2025/05/11 00:51:43 logger.go:64: 🔍 Querying root server via QUIC: 192.5.5.241:53
+[APP] 2025/05/11 00:55:53 logger.go:64: Connecting to Redis server at ...
+[APP] 2025/05/11 00:55:53 logger.go:64: Successfully connected to Redis server at 
+[APP] 2025/05/11 00:55:53 logger.go:64: 🚀 QUIC DNS server listening on port 853...
