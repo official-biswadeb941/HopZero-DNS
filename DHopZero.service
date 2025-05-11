@@ -3,15 +3,13 @@ Description=HopZero DNS Resolver
 After=network.target
 
 [Service]
-WorkingDirectory=/home/misti-rani/HopZero-DNS
-ExecStart=/usr/bin/go run /home/misti-rani/HopZero-DNS/app.go
-Environment=GOPATH=/home/misti-rani/go
+WorkingDirectory=/etc/HopZero-DNS
+ExecStart=/usr/bin/go run /etc/HopZero-DNS/app.go
+Restart=always
 User=root
 Group=root
-Restart=always
-RestartSec=5
-LimitNOFILE=4096
-TimeoutStartSec=30
+Environment=GOPATH=/etc/HopZero-DNS
+Environment=GOBIN=/usr/local/go/bin
 
 [Install]
 WantedBy=multi-user.target

@@ -1,21 +1,18 @@
 package Resolver
 
 import (
-	"bufio"
-	"context"
 	"encoding/json"
 	"fmt"
 	"net"
 	"os"
 	"path"
-	"strings"
 	"time"
+	"bufio"
+	"strings"
 
 	"github.com/miekg/dns"
-	"github.com/official-biswadeb941/HopZero-DNS/Modules/Logger"
-	"github.com/official-biswadeb941/HopZero-DNS/Modules/QUIC"
 	"github.com/official-biswadeb941/HopZero-DNS/Modules/Redis"
-	"github.com/quic-go/quic-go"
+	"github.com/official-biswadeb941/HopZero-DNS/Modules/Logger"
 )
 
 type RootServer struct {
@@ -27,9 +24,11 @@ type RootServer struct {
 
 // Load root servers from root.conf file
 func loadRootServers() ([]RootServer, error) {
-	configDir := "Confs"
+	// Dynamically join the path to the root.conf file
+	configDir := "Confs"  // This can be dynamic depending on where the configuration is located
 	filePath := path.Join(configDir, "root.conf")
-
+	
+	// Open the root.conf file dynamically
 	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open root.conf file at %s: %v", filePath, err)
@@ -41,23 +40,32 @@ func loadRootServers() ([]RootServer, error) {
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
-		line := strings.TrimSpace(scanner.Text())
+		line := scanner.Text()
+		line = strings.TrimSpace(line)
 
 		if strings.HasPrefix(line, "root-server-") {
+			// If we find a new root-server entry, add the previous one (if any)
 			if currentServer.Address != "" {
 				rootServers = append(rootServers, currentServer)
 			}
+			// Reset for the new server
 			currentServer = RootServer{}
 		} else if strings.HasPrefix(line, "address:") {
 			currentServer.Address = strings.TrimSpace(strings.TrimPrefix(line, "address:"))
 		} else if strings.HasPrefix(line, "name:") {
 			currentServer.Name = strings.TrimSpace(strings.TrimPrefix(line, "name:"))
 		} else if strings.HasPrefix(line, "port:") {
-			fmt.Sscanf(strings.TrimPrefix(line, "port:"), "%d", &currentServer.Port)
+			port := strings.TrimSpace(strings.TrimPrefix(line, "port:"))
+			// Convert port to integer
+			fmt.Sscanf(port, "%d", &currentServer.Port)
 		} else if strings.HasPrefix(line, "ttl:") {
-			fmt.Sscanf(strings.TrimPrefix(line, "ttl:"), "%d", &currentServer.TTL)
+			ttl := strings.TrimSpace(strings.TrimPrefix(line, "ttl:"))
+			// Convert ttl to integer
+			fmt.Sscanf(ttl, "%d", &currentServer.TTL)
 		}
 	}
+
+	// Add the last root server entry to the list
 	if currentServer.Address != "" {
 		rootServers = append(rootServers, currentServer)
 	}
@@ -69,8 +77,9 @@ func loadRootServers() ([]RootServer, error) {
 	return rootServers, nil
 }
 
-// RecursiveResolve performs recursive DNS resolution using QUIC
+// RecursiveResolve performs recursive DNS resolution using root servers from root.conf
 func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
+	// Load root servers from the configuration file
 	rootServers, err := loadRootServers()
 	if err != nil {
 		return nil, fmt.Errorf("failed to load root servers: %v", err)
@@ -78,7 +87,7 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 
 	cacheKey := fmt.Sprintf("%s_%d", domain, qtype)
 
-	// Cache check
+	// Check cache first
 	cached, err := Redis.RedisClient.Get(Redis.Ctx, cacheKey).Result()
 	if err == nil {
 		var answerStrs []string
@@ -89,94 +98,60 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 					answers = append(answers, rr)
 				}
 			}
+			// Log cache hit
 			Logger.LogApplication(fmt.Sprintf("✅ Cache hit for domain: %s, qtype: %d", domain, qtype))
 			return answers, nil
 		}
 	}
 
+	// Otherwise, start the recursive resolution
+	client := new(dns.Client)
+	client.Timeout = 5 * time.Second
+
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(domain), qtype)
 
-	tlsConf, err := QUIC.LoadTLSConfig()
-	if err != nil {
-		Logger.LogError("Failed to load TLS config for QUIC", err)
-		return nil, err
-	}
-
-	// Query over QUIC
+	// Use the dynamically loaded root servers
 	for _, server := range rootServers {
-		addr := net.JoinHostPort(server.Address, fmt.Sprintf("%d", server.Port))
-		Logger.LogApplication(fmt.Sprintf("🔍 Querying root server via QUIC: %s", addr))
-
-		ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-		defer cancel()
-
-		quicConn, err := quic.DialAddr(ctx, addr, tlsConf, nil)
+		Logger.LogApplication(fmt.Sprintf("🔍 Querying root server: %s for domain: %s", server.Address, domain))
+		resp, _, err := client.Exchange(msg, net.JoinHostPort(server.Address, fmt.Sprintf("%d", server.Port)))
 		if err != nil {
-			Logger.LogError(fmt.Sprintf("❌ QUIC dial error to %s", addr), err)
+			Logger.LogError(fmt.Sprintf("Failed to query server %s for domain %s", server.Address, domain), err)
 			continue
 		}
-
-		stream, err := quicConn.OpenStreamSync(ctx)
-		if err != nil {
-			Logger.LogError(fmt.Sprintf("❌ Failed to open QUIC stream to %s", addr), err)
-			continue
-		}
-
-		packed, err := msg.Pack()
-		if err != nil {
-			Logger.LogError("❌ Failed to pack DNS query", err)
-			continue
-		}
-
-		if _, err := stream.Write(packed); err != nil {
-			Logger.LogError(fmt.Sprintf("❌ Failed to write to QUIC stream for %s", domain), err)
-			continue
-		}
-
-		buf := make([]byte, 65535)
-		n, err := stream.Read(buf)
-		if err != nil {
-			Logger.LogError(fmt.Sprintf("❌ Failed to read from QUIC stream for %s", domain), err)
-			continue
-		}
-
-		resp := new(dns.Msg)
-		if err := resp.Unpack(buf[:n]); err != nil {
-			Logger.LogError("❌ Failed to unpack DNS response", err)
-			continue
-		}
-
-		answers, err := followChain(resp, qtype)
+		answers, err := followChain(client, resp, qtype)
 		if err == nil && len(answers) > 0 {
+			// Convert RRs to string for serialization
 			var answerStrs []string
 			for _, rr := range answers {
 				answerStrs = append(answerStrs, rr.String())
 			}
 			if b, err := json.Marshal(answerStrs); err == nil {
-				ttl := time.Duration(300) * time.Second
+				ttl := time.Duration(300) * time.Second // Default TTL
 				if len(answers) > 0 {
 					ttl = time.Duration(answers[0].Header().Ttl) * time.Second
 				}
 				Redis.RedisClient.Set(Redis.Ctx, cacheKey, b, ttl)
+				// Log successful resolution
+				Logger.LogApplication(fmt.Sprintf("✅ Successfully resolved domain: %s, qtype: %d", domain, qtype))
 			}
-			Logger.LogApplication(fmt.Sprintf("✅ Successfully resolved via QUIC: %s", domain))
 			return answers, nil
 		}
 	}
 
-	Logger.LogError(fmt.Sprintf("Failed to resolve via QUIC: %s", domain), fmt.Errorf("all root servers failed"))
+	// Log failure to resolve the domain
+	Logger.LogError(fmt.Sprintf("Failed to resolve domain: %s, qtype: %d", domain, qtype), fmt.Errorf("all root servers failed"))
 	return nil, fmt.Errorf("failed to resolve domain: %s", domain)
 }
 
-// followChain recursively follows DNS delegation
-func followChain(msg *dns.Msg, qtype uint16) ([]dns.RR, error) {
+// followChain follows the chain of NS records to get to the final answer
+func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, error) {
 	if len(msg.Answer) > 0 {
 		var answers []dns.RR
 		for _, ans := range msg.Answer {
 			answers = append(answers, ans)
 			if cname, ok := ans.(*dns.CNAME); ok {
-				Logger.LogApplication(fmt.Sprintf("🔄 CNAME found: %s -> %s", cname.Hdr.Name, cname.Target))
+				Logger.LogApplication(fmt.Sprintf("🔄 CNAME found: %s, resolving target: %s", cname.Hdr.Name, cname.Target))
 				cnameAnswers, err := RecursiveResolve(cname.Target, qtype)
 				if err == nil {
 					answers = append(answers, cnameAnswers...)
@@ -186,44 +161,46 @@ func followChain(msg *dns.Msg, qtype uint16) ([]dns.RR, error) {
 		return answers, nil
 	}
 
-	// If only NS records, try resolving those
+	// Iterate over NS records and follow the chain
 	for _, rr := range msg.Ns {
 		if ns, ok := rr.(*dns.NS); ok {
 			nsIP := resolveNSIP(ns.Ns)
 			if nsIP == "" {
 				continue
 			}
-			Logger.LogApplication(fmt.Sprintf("🔍 Querying NS IP: %s (%s)", ns.Ns, nsIP))
-			client := new(dns.Client)
+			Logger.LogApplication(fmt.Sprintf("🔍 Querying NS: %s, IP: %s", ns.Ns, nsIP))
 			query := new(dns.Msg)
 			query.SetQuestion(msg.Question[0].Name, qtype)
 			resp, _, err := client.Exchange(query, net.JoinHostPort(nsIP, "53"))
 			if err != nil {
-				Logger.LogError(fmt.Sprintf("Failed to query NS: %s", ns.Ns), err)
+				Logger.LogError(fmt.Sprintf("Failed to query NS %s", ns.Ns), err)
 				continue
 			}
-			return followChain(resp, qtype)
+			return followChain(client, resp, qtype)
 		}
 	}
 
 	return nil, fmt.Errorf("could not follow DNS chain")
 }
 
-// resolveNSIP resolves an NS name to an IP using root servers
+// resolveNSIP resolves an NS record's IP (both A and AAAA records) for DNS queries
 func resolveNSIP(ns string) string {
 	client := new(dns.Client)
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(ns), dns.TypeA)
 
+	// Look up A record for NS (IPv4)
 	rootServers, err := loadRootServers()
 	if err != nil {
-		Logger.LogError("Failed to load root servers for NS IP lookup", err)
+		Logger.LogError("Failed to load root servers", err)
 		return ""
 	}
 
 	for _, server := range rootServers {
+		Logger.LogApplication(fmt.Sprintf("🔍 Querying A record for NS: %s from root server: %s", ns, server.Address))
 		resp, _, err := client.Exchange(msg, net.JoinHostPort(server.Address, fmt.Sprintf("%d", server.Port)))
 		if err != nil {
+			Logger.LogError(fmt.Sprintf("Failed to query A record for NS: %s", ns), err)
 			continue
 		}
 		for _, ans := range resp.Answer {
@@ -233,10 +210,13 @@ func resolveNSIP(ns string) string {
 		}
 	}
 
+	// Fallback to AAAA record for NS (IPv6)
 	msg.SetQuestion(dns.Fqdn(ns), dns.TypeAAAA)
 	for _, server := range rootServers {
+		Logger.LogApplication(fmt.Sprintf("🔍 Querying AAAA record for NS: %s from root server: %s", ns, server.Address))
 		resp, _, err := client.Exchange(msg, net.JoinHostPort(server.Address, fmt.Sprintf("%d", server.Port)))
 		if err != nil {
+			Logger.LogError(fmt.Sprintf("Failed to query AAAA record for NS: %s", ns), err)
 			continue
 		}
 		for _, ans := range resp.Answer {

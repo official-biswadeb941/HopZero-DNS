@@ -17,7 +17,3 @@ mysql:
     pool_name: "mypool"   # Pool name
     pool_reset_session: true  # Reset session state when returning connections
     timeout: 30           # Timeout in seconds for MySQL connections
-
-tls:
-  cert: "Modules/SSL/cert.pem"
-  key: "Modules/SSL/key.pem"
