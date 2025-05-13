@@ -10,7 +10,7 @@ Logs/
 *.out
 
 # Ignore any IDE-specific files (e.g., for VSCode)
-.vscode/
+.vscode
 
 # Ignore other temporary files or directories that shouldn't be committed
 *.swp

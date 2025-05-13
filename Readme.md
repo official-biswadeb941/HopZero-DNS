@@ -1,4 +1,4 @@
-💝# 🛡️ HopZero-DNS
+# 🛡️ HopZero-DNS
 
 > **Zero-hop. Zero-trust. Ultra-resilient DNS for the modern internet.**
 
