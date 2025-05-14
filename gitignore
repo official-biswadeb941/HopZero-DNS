@@ -1,6 +1,6 @@
 # Ignore Logs directories (both visible and hidden)
-Logs/
-.Logs/
+Logs/*
+.Logs/*
 
 # Ignore log files
 *.log
