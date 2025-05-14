@@ -9,6 +9,7 @@ import (
 	"path"
 	"strings"
 	"time"
+	"log"
 
 	"github.com/miekg/dns"
 	"github.com/official-biswadeb941/HopZero-DNS/Modules/DNSSEC"
@@ -25,8 +26,27 @@ type RootServer struct {
 
 var (
 	RootTrustAnchor *dns.DNSKEY
-	DNSSECEnforced  = true
+	resolverLogger  *Logger.ModuleLogger
 )
+
+func init() {
+	var err error
+	resolverLogger, err = Logger.GetLogger("Resolver_Logs.log")
+	if err != nil {
+		logFallback := log.New(os.Stderr, "", log.LstdFlags)
+		logFallback.Printf("[Resolver][ERROR] Failed to initialize logger: %v", err)
+		os.Exit(1)
+	}
+	resolverLogger.Info("Logger initialized successfully")
+
+	key, err := loadRootTrustAnchor()
+	if err != nil {
+		resolverLogger.Error(fmt.Sprintf("Failed to load root trust anchor: %v", err))
+		os.Exit(1)
+	}
+	resolverLogger.Info("Root trust anchor loaded successfully")
+	RootTrustAnchor = key
+}
 
 func loadRootServers() ([]RootServer, error) {
 	configDir := "Confs"
@@ -34,7 +54,8 @@ func loadRootServers() ([]RootServer, error) {
 
 	file, err := os.Open(filePath)
 	if err != nil {
-		return nil, fmt.Errorf("failed to open root.conf file at %s: %v", filePath, err)
+		resolverLogger.Error(fmt.Sprintf("Failed to open root.conf file at %s: %v", filePath, err))
+		return nil, err
 	}
 	defer file.Close()
 
@@ -65,9 +86,11 @@ func loadRootServers() ([]RootServer, error) {
 	}
 
 	if err := scanner.Err(); err != nil {
-		return nil, fmt.Errorf("failed to read root.conf file: %v", err)
+		resolverLogger.Error(fmt.Sprintf("Failed to scan root.conf: %v", err))
+		return nil, err
 	}
 
+	resolverLogger.Info(fmt.Sprintf("Loaded %d root servers", len(rootServers)))
 	return rootServers, nil
 }
 
@@ -92,15 +115,6 @@ func loadRootTrustAnchor() (*dns.DNSKEY, error) {
 	return nil, fmt.Errorf("DNSKEY not found in root.key")
 }
 
-func init() {
-	key, err := loadRootTrustAnchor()
-	if err != nil {
-		Logger.LogError("Failed to load root trust anchor", err)
-		os.Exit(1)
-	}
-	RootTrustAnchor = key
-}
-
 func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 	rootServers, err := loadRootServers()
 	if err != nil {
@@ -117,7 +131,7 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 					answers = append(answers, rr)
 				}
 			}
-			Logger.LogApplication(fmt.Sprintf("✅ Cache hit for domain: %s", domain))
+			resolverLogger.Info(fmt.Sprintf("Cache hit for domain: %s", domain))
 			return answers, nil
 		}
 	}
@@ -128,13 +142,12 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(domain), qtype)
-	msg.SetEdns0(4096, DNSSECEnforced)
 
 	for _, server := range rootServers {
-		Logger.LogApplication(fmt.Sprintf("🔍 Querying root server: %s", server.Address))
+		resolverLogger.Info(fmt.Sprintf("Querying root server: %s", server.Address))
 		resp, _, err := client.Exchange(msg, net.JoinHostPort(server.Address, fmt.Sprintf("%d", server.Port)))
 		if err != nil {
-			Logger.LogError("Query failed", err)
+			resolverLogger.Warn(fmt.Sprintf("Query failed for %s: %v", server.Address, err))
 			continue
 		}
 		answers, err := followChain(client, resp, qtype)
@@ -147,11 +160,12 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 				ttl := time.Duration(answers[0].Header().Ttl) * time.Second
 				Redis.RedisClient.Set(Redis.Ctx, cacheKey, b, ttl)
 			}
-			Logger.LogApplication(fmt.Sprintf("✅ Successfully resolved: %s", domain))
+			resolverLogger.Info(fmt.Sprintf("Successfully resolved domain: %s", domain))
 			return answers, nil
 		}
 	}
 
+	resolverLogger.Error(fmt.Sprintf("Failed to resolve domain: %s", domain))
 	return nil, fmt.Errorf("failed to resolve domain: %s", domain)
 }
 
@@ -161,6 +175,7 @@ func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, erro
 		for _, ans := range msg.Answer {
 			answers = append(answers, ans)
 			if cname, ok := ans.(*dns.CNAME); ok {
+				resolverLogger.Info(fmt.Sprintf("Following CNAME to: %s", cname.Target))
 				cnameAnswers, err := RecursiveResolve(cname.Target, qtype)
 				if err == nil {
 					answers = append(answers, cnameAnswers...)
@@ -174,22 +189,24 @@ func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, erro
 		if ns, ok := rr.(*dns.NS); ok {
 			nsIP := resolveNSIP(ns.Ns)
 			if nsIP == "" {
+				resolverLogger.Warn(fmt.Sprintf("Failed to resolve IP for NS: %s", ns.Ns))
 				continue
 			}
-			Logger.LogApplication(fmt.Sprintf("🔍 Querying NS: %s, IP: %s", ns.Ns, nsIP))
+			resolverLogger.Info(fmt.Sprintf("Querying NS: %s, IP: %s", ns.Ns, nsIP))
+
 			query := new(dns.Msg)
 			query.SetQuestion(msg.Question[0].Name, qtype)
-			query.SetEdns0(4096, DNSSECEnforced)
+
 			resp, _, err := client.Exchange(query, net.JoinHostPort(nsIP, "53"))
 			if err != nil {
-				Logger.LogError("Failed to query NS", err)
+				resolverLogger.Warn(fmt.Sprintf("Failed to query NS: %v", err))
 				continue
 			}
-			if DNSSECEnforced && !DNSSEC.Validate(resp) {
-				Logger.LogError("DNSSEC validation failed", fmt.Errorf("signature verification failed"))
+			if !DNSSEC.Validate(resp) {
+				resolverLogger.Error("DNSSEC validation failed: signature verification failed")
 				continue
 			}
-			Logger.LogApplication("✅ DNSSEC validated for: " + msg.Question[0].Name)
+			resolverLogger.Info(fmt.Sprintf("DNSSEC validated for: %s", msg.Question[0].Name))
 			return followChain(client, resp, qtype)
 		}
 	}
@@ -200,11 +217,10 @@ func resolveNSIP(ns string) string {
 	client := new(dns.Client)
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(ns), dns.TypeA)
-	msg.SetEdns0(4096, DNSSECEnforced)
 
 	rootServers, err := loadRootServers()
 	if err != nil {
-		Logger.LogError("Failed to load root servers", err)
+		resolverLogger.Error(fmt.Sprintf("Failed to load root servers: %v", err))
 		return ""
 	}
 

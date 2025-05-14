@@ -1,0 +1,3 @@
+2025/05/15 02:31:05 logger.go:61: [✅ App][INFO ] 🔌 Redis cache initialized
+2025/05/15 02:31:05 logger.go:61: [✅ App][INFO ] 📡 DNS proxy is active on port 53 and forwarding to DoT
+2025/05/15 02:31:05 logger.go:61: [✅ App][INFO ] 🚀 DNS-over-TLS server is running on port 853
