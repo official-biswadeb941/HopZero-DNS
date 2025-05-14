@@ -1,18 +1,18 @@
 package Resolver
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"net"
 	"os"
 	"path"
-	"time"
-	"bufio"
 	"strings"
+	"time"
 
 	"github.com/miekg/dns"
-	"github.com/official-biswadeb941/HopZero-DNS/Modules/Redis"
 	"github.com/official-biswadeb941/HopZero-DNS/Modules/Logger"
+	"github.com/official-biswadeb941/HopZero-DNS/Modules/Redis"
 )
 
 type RootServer struct {
@@ -22,13 +22,12 @@ type RootServer struct {
 	TTL     int
 }
 
-// Load root servers from root.conf file
+var RootTrustAnchor *dns.DNSKEY
+
 func loadRootServers() ([]RootServer, error) {
-	// Dynamically join the path to the root.conf file
-	configDir := "Confs"  // This can be dynamic depending on where the configuration is located
+	configDir := "Confs"
 	filePath := path.Join(configDir, "root.conf")
-	
-	// Open the root.conf file dynamically
+
 	file, err := os.Open(filePath)
 	if err != nil {
 		return nil, fmt.Errorf("failed to open root.conf file at %s: %v", filePath, err)
@@ -44,11 +43,9 @@ func loadRootServers() ([]RootServer, error) {
 		line = strings.TrimSpace(line)
 
 		if strings.HasPrefix(line, "root-server-") {
-			// If we find a new root-server entry, add the previous one (if any)
 			if currentServer.Address != "" {
 				rootServers = append(rootServers, currentServer)
 			}
-			// Reset for the new server
 			currentServer = RootServer{}
 		} else if strings.HasPrefix(line, "address:") {
 			currentServer.Address = strings.TrimSpace(strings.TrimPrefix(line, "address:"))
@@ -56,16 +53,13 @@ func loadRootServers() ([]RootServer, error) {
 			currentServer.Name = strings.TrimSpace(strings.TrimPrefix(line, "name:"))
 		} else if strings.HasPrefix(line, "port:") {
 			port := strings.TrimSpace(strings.TrimPrefix(line, "port:"))
-			// Convert port to integer
 			fmt.Sscanf(port, "%d", &currentServer.Port)
 		} else if strings.HasPrefix(line, "ttl:") {
 			ttl := strings.TrimSpace(strings.TrimPrefix(line, "ttl:"))
-			// Convert ttl to integer
 			fmt.Sscanf(ttl, "%d", &currentServer.TTL)
 		}
 	}
 
-	// Add the last root server entry to the list
 	if currentServer.Address != "" {
 		rootServers = append(rootServers, currentServer)
 	}
@@ -77,17 +71,43 @@ func loadRootServers() ([]RootServer, error) {
 	return rootServers, nil
 }
 
-// RecursiveResolve performs recursive DNS resolution using root servers from root.conf
+func loadRootTrustAnchor() (*dns.DNSKEY, error) {
+	file, err := os.Open("./Confs/root.key")
+	if err != nil {
+		return nil, err
+	}
+	defer file.Close()
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if strings.HasPrefix(line, ".") && strings.Contains(line, "DNSKEY") {
+			if rr, err := dns.NewRR(line); err == nil {
+				if key, ok := rr.(*dns.DNSKEY); ok {
+					return key, nil
+				}
+			}
+		}
+	}
+	return nil, fmt.Errorf("DNSKEY not found in root.key")
+}
+
+func init() {
+	key, err := loadRootTrustAnchor()
+	if err != nil {
+		Logger.LogError("Failed to load root trust anchor", err)
+		os.Exit(1)
+	}
+	RootTrustAnchor = key
+}
+
 func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
-	// Load root servers from the configuration file
 	rootServers, err := loadRootServers()
 	if err != nil {
 		return nil, fmt.Errorf("failed to load root servers: %v", err)
 	}
 
 	cacheKey := fmt.Sprintf("%s_%d", domain, qtype)
-
-	// Check cache first
 	cached, err := Redis.RedisClient.Get(Redis.Ctx, cacheKey).Result()
 	if err == nil {
 		var answerStrs []string
@@ -98,20 +118,19 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 					answers = append(answers, rr)
 				}
 			}
-			// Log cache hit
 			Logger.LogApplication(fmt.Sprintf("✅ Cache hit for domain: %s, qtype: %d", domain, qtype))
 			return answers, nil
 		}
 	}
 
-	// Otherwise, start the recursive resolution
 	client := new(dns.Client)
+	client.Net = "udp"
 	client.Timeout = 5 * time.Second
 
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(domain), qtype)
+	msg.SetEdns0(4096, true)
 
-	// Use the dynamically loaded root servers
 	for _, server := range rootServers {
 		Logger.LogApplication(fmt.Sprintf("🔍 Querying root server: %s for domain: %s", server.Address, domain))
 		resp, _, err := client.Exchange(msg, net.JoinHostPort(server.Address, fmt.Sprintf("%d", server.Port)))
@@ -121,30 +140,26 @@ func RecursiveResolve(domain string, qtype uint16) ([]dns.RR, error) {
 		}
 		answers, err := followChain(client, resp, qtype)
 		if err == nil && len(answers) > 0 {
-			// Convert RRs to string for serialization
 			var answerStrs []string
 			for _, rr := range answers {
 				answerStrs = append(answerStrs, rr.String())
 			}
 			if b, err := json.Marshal(answerStrs); err == nil {
-				ttl := time.Duration(300) * time.Second // Default TTL
+				ttl := time.Duration(300) * time.Second
 				if len(answers) > 0 {
 					ttl = time.Duration(answers[0].Header().Ttl) * time.Second
 				}
 				Redis.RedisClient.Set(Redis.Ctx, cacheKey, b, ttl)
-				// Log successful resolution
 				Logger.LogApplication(fmt.Sprintf("✅ Successfully resolved domain: %s, qtype: %d", domain, qtype))
 			}
 			return answers, nil
 		}
 	}
 
-	// Log failure to resolve the domain
 	Logger.LogError(fmt.Sprintf("Failed to resolve domain: %s, qtype: %d", domain, qtype), fmt.Errorf("all root servers failed"))
 	return nil, fmt.Errorf("failed to resolve domain: %s", domain)
 }
 
-// followChain follows the chain of NS records to get to the final answer
 func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, error) {
 	if len(msg.Answer) > 0 {
 		var answers []dns.RR
@@ -161,7 +176,6 @@ func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, erro
 		return answers, nil
 	}
 
-	// Iterate over NS records and follow the chain
 	for _, rr := range msg.Ns {
 		if ns, ok := rr.(*dns.NS); ok {
 			nsIP := resolveNSIP(ns.Ns)
@@ -171,11 +185,17 @@ func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, erro
 			Logger.LogApplication(fmt.Sprintf("🔍 Querying NS: %s, IP: %s", ns.Ns, nsIP))
 			query := new(dns.Msg)
 			query.SetQuestion(msg.Question[0].Name, qtype)
+			query.SetEdns0(4096, true)
 			resp, _, err := client.Exchange(query, net.JoinHostPort(nsIP, "53"))
 			if err != nil {
 				Logger.LogError(fmt.Sprintf("Failed to query NS %s", ns.Ns), err)
 				continue
 			}
+			if !validateDNSSEC(resp) {
+				Logger.LogError("DNSSEC validation failed", fmt.Errorf("signature verification failed"))
+				continue
+			}
+			Logger.LogApplication("✅ DNSSEC validation passed for zone: " + msg.Question[0].Name)
 			return followChain(client, resp, qtype)
 		}
 	}
@@ -183,13 +203,12 @@ func followChain(client *dns.Client, msg *dns.Msg, qtype uint16) ([]dns.RR, erro
 	return nil, fmt.Errorf("could not follow DNS chain")
 }
 
-// resolveNSIP resolves an NS record's IP (both A and AAAA records) for DNS queries
 func resolveNSIP(ns string) string {
 	client := new(dns.Client)
 	msg := new(dns.Msg)
 	msg.SetQuestion(dns.Fqdn(ns), dns.TypeA)
+	msg.SetEdns0(4096, true)
 
-	// Look up A record for NS (IPv4)
 	rootServers, err := loadRootServers()
 	if err != nil {
 		Logger.LogError("Failed to load root servers", err)
@@ -210,7 +229,6 @@ func resolveNSIP(ns string) string {
 		}
 	}
 
-	// Fallback to AAAA record for NS (IPv6)
 	msg.SetQuestion(dns.Fqdn(ns), dns.TypeAAAA)
 	for _, server := range rootServers {
 		Logger.LogApplication(fmt.Sprintf("🔍 Querying AAAA record for NS: %s from root server: %s", ns, server.Address))
@@ -227,4 +245,65 @@ func resolveNSIP(ns string) string {
 	}
 
 	return ""
+}
+
+func validateDNSSEC(msg *dns.Msg) bool {
+	var dnskeyRRs []dns.RR
+	var rrsigRR *dns.RRSIG
+
+	for _, rr := range msg.Answer {
+		switch rr := rr.(type) {
+		case *dns.DNSKEY:
+			dnskeyRRs = append(dnskeyRRs, rr)
+		case *dns.RRSIG:
+			if rr.TypeCovered == dns.TypeDNSKEY {
+				rrsigRR = rr
+			}
+		}
+	}
+
+	// Log the presence of key components
+	if RootTrustAnchor == nil || rrsigRR == nil || len(dnskeyRRs) == 0 {
+		Logger.LogApplication(fmt.Sprintf(
+			"[DNSSEC] ❌ Incomplete validation set: RootKeyPresent=%v, RRSIGPresent=%v, DNSKEYCount=%d",
+			RootTrustAnchor != nil, rrsigRR != nil, len(dnskeyRRs),
+		))
+		return false
+	}
+
+	for _, rr := range dnskeyRRs {
+		if dnskey, ok := rr.(*dns.DNSKEY); ok {
+			Logger.LogApplication(fmt.Sprintf(
+				"[DNSSEC] 🔍 Evaluating DNSKEY tag=%d against RRSIG tag=%d",
+				dnskey.KeyTag(), rrsigRR.KeyTag,
+			))
+
+			if dnskey.KeyTag() == rrsigRR.KeyTag {
+				err := rrsigRR.Verify(dnskey, dnskeyRRs)
+				if err != nil {
+					Logger.LogError(fmt.Sprintf(
+						"[DNSSEC] ❌ Signature validation failed with DNSKEY tag=%d", dnskey.KeyTag(),
+					), err)
+					continue
+				}
+
+				Logger.LogApplication(fmt.Sprintf(
+					"[DNSSEC] ✅ RRSIG validated successfully with DNSKEY tag=%d", dnskey.KeyTag(),
+				))
+
+				if dnskey.KeyTag() == RootTrustAnchor.KeyTag() && dnskey.PublicKey == RootTrustAnchor.PublicKey {
+					Logger.LogApplication("[DNSSEC] 🔐 DNSSEC signature verified with trusted root anchor ✅")
+					return true
+				}
+
+				Logger.LogApplication(fmt.Sprintf(
+					"[DNSSEC] ⚠️ Signature OK, but DNSKEY tag=%d doesn't match Root Anchor tag=%d",
+					dnskey.KeyTag(), RootTrustAnchor.KeyTag(),
+				))
+			}
+		}
+	}
+
+	Logger.LogApplication("[DNSSEC] ❌ DNSSEC validation failed: no trusted DNSKEY matched.")
+	return false
 }
