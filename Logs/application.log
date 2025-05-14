@@ -3585,3 +3585,73 @@
 [APP] 2025/05/15 00:10:41 logger.go:64: 🔍 Querying root server: 199.7.83.42
 [APP] 2025/05/15 00:10:41 logger.go:64: 🔍 Querying root server: 202.12.27.33
 [APP] 2025/05/15 00:10:41 logger.go:64: ✅ Successfully forwarded query for github.com. to DoT server
+[APP] 2025/05/15 00:10:45 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:45 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:45 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:45 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:45 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:45 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:46 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:46 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:46 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:47 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:47 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:47 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:47 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:47 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:47 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:49 logger.go:64: 🔍 Received DNS query for proxy.individual.githubcopilot.com.
+[APP] 2025/05/15 00:10:49 logger.go:64: 🔍 Querying root server: 198.41.0.4
+[APP] 2025/05/15 00:10:49 logger.go:64: 🔍 Querying root server: 198.41.0.4
+[APP] 2025/05/15 00:10:49 logger.go:64: ✅ Successfully resolved: copilot-proxy.githubusercontent.com.
+[APP] 2025/05/15 00:10:49 logger.go:64: ✅ Successfully resolved: proxy.individual.githubcopilot.com.
+[APP] 2025/05/15 00:10:49 logger.go:64: ✅ Successfully forwarded query for proxy.individual.githubcopilot.com. to DoT server
+[APP] 2025/05/15 00:10:50 logger.go:64: 🔍 Received DNS query for telemetry.individual.githubcopilot.com.
+[APP] 2025/05/15 00:10:50 logger.go:64: ✅ Cache hit for domain: telemetry.individual.githubcopilot.com.
+[APP] 2025/05/15 00:10:50 logger.go:64: ✅ Successfully forwarded query for telemetry.individual.githubcopilot.com. to DoT server
+[APP] 2025/05/15 00:10:50 logger.go:64: 🔍 Received DNS query for telemetry.individual.githubcopilot.com.
+[APP] 2025/05/15 00:10:50 logger.go:64: ✅ Cache hit for domain: telemetry.individual.githubcopilot.com.
+[APP] 2025/05/15 00:10:50 logger.go:64: ✅ Successfully forwarded query for telemetry.individual.githubcopilot.com. to DoT server
+[APP] 2025/05/15 00:10:51 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:51 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:51 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:51 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:51 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:51 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:53 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:53 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:53 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:53 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:53 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:53 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Received DNS query for github.com.
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Received DNS query for github.com.
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 198.41.0.4
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 198.41.0.4
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.228.79.201
+[APP] 2025/05/15 00:10:54 logger.go:64: ✅ Successfully resolved: github.com.
+[APP] 2025/05/15 00:10:54 logger.go:64: ✅ Successfully forwarded query for github.com. to DoT server
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.33.4.12
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 199.7.91.13
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.203.230.10
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.5.5.241
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.112.36.4
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 198.97.190.53
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.36.148.17
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 192.58.128.30
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 193.0.14.129
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 199.7.83.42
+[APP] 2025/05/15 00:10:54 logger.go:64: 🔍 Querying root server: 202.12.27.33
+[APP] 2025/05/15 00:10:54 logger.go:64: ✅ Successfully forwarded query for github.com. to DoT server
+[APP] 2025/05/15 00:10:55 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:55 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:55 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: 🔍 Received DNS query for mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Cache hit for domain: mobile.events.data.microsoft.com.
+[APP] 2025/05/15 00:10:55 logger.go:64: ✅ Successfully forwarded query for mobile.events.data.microsoft.com. to DoT server
