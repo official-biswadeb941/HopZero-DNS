@@ -1,5 +1,5 @@
 # Ignore Logs directory and log files
-Logs/
+Logs
 
 # Ignore other possible log files
 *.log
